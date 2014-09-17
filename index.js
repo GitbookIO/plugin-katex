@@ -9,6 +9,11 @@ module.exports = {
             "https://khan.github.io/KaTeX/lib/katex/katex.min.css"
         ]
     },
+    ebook: {
+        css: [
+            "https://khan.github.io/KaTeX/lib/katex/katex.min.css"
+        ]
+    },
     hooks: {
         page: function(page) {
             for (var i in page.sections) {
