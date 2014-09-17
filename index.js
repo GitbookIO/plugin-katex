@@ -18,7 +18,8 @@ module.exports = {
                     var type = $(this).attr("type") || "";
                     if (type.indexOf("math/tex") < 0) return;
 
-                    var math = $(this).html().replace(/\\/gi,"/");
+                    var math = $(this).html().toString("utf8");
+                    console.log("convert '"+math+"'");
                     $(this).replaceWith(katex.renderToString(math));
                 });
 
