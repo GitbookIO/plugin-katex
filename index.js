@@ -4,7 +4,10 @@ var cheerio = require("cheerio");
 module.exports = {
     book: {
         assets: "./book",
-        js: []
+        js: [],
+        css: [
+            "https://khan.github.io/KaTeX/lib/katex/katex.min.css"
+        ]
     },
     hooks: {
         page: function(page) {
