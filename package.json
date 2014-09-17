@@ -16,7 +16,7 @@
         "url": "https://github.com/GitbookIO/plugin-katex/issues"
     },
     "dependencies": {
-        "katex": "1.0.0",
+        "katex": "0.1.0",
         "cheerio": "0.17.0"
     }
 }
