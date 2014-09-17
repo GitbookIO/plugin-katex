@@ -3,15 +3,16 @@ var cheerio = require("cheerio");
 
 module.exports = {
     book: {
-        assets: "./book",
+        assets: "./static",
         js: [],
         css: [
-            "https://khan.github.io/KaTeX/lib/katex/katex.min.css"
+            "katex.min.css"
         ]
     },
     ebook: {
+        assets: "./static",
         css: [
-            "https://khan.github.io/KaTeX/lib/katex/katex.min.css"
+            "katex.min.css"
         ]
     },
     hooks: {
