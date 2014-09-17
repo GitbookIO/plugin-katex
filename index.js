@@ -1,27 +1,33 @@
 var katex = require("katex");
+var cheerio = require("cheerio");
 
 module.exports = {
     book: {
         assets: "./book",
-        js: [],
-        hooks: {
-            page: function(page) {
-                for (var i in page.sections) {
-                    section = page.sections[i];
-                    if ( section.type != "normal" ) continue;
+        js: []
+    },
+    hooks: {
+        page: function(page) {
+            for (var i in page.sections) {
+                section = page.sections[i];
+                if ( section.type != "normal" ) continue;
 
-                    var $ = cheerio.load(section.content);
-                    $("script[type='math/tex']").each(function() {
-                        var math = $(this).html();
-                        $(this).replaceWith(katex.renderToString(math));
-                    });
+                var $ = cheerio.load(section.content);
+                $("script").each(function() {
+                    // Check is math
+                    var type = $(this).attr("type") || "";
+                    if (type.indexOf("math/tex") < 0) return;
 
-                    // Replace by transform
-                    section.content = $.html();
-                }
+                    var math = $(this).html().toString("utf8");
+                    console.log("convert '"+math+"'");
+                    $(this).replaceWith(katex.renderToString(math));
+                });
 
-                return page;
+                // Replace by transform
+                section.content = $.html();
             }
+
+            return page;
         }
     }
 };
