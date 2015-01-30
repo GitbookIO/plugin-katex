@@ -4,7 +4,7 @@
     "main": "index.js",
     "version": "0.2.1",
     "engines": {
-        "gitbook": "*"
+        "gitbook": ">1.x.x"
     },
     "homepage": "https://github.com/GitbookIO/plugin-katex",
     "repository": {
@@ -16,7 +16,6 @@
         "url": "https://github.com/GitbookIO/plugin-katex/issues"
     },
     "dependencies": {
-        "katex": "0.1.*",
-        "cheerio": "0.17.0"
+        "katex": "0.1.*"
     }
 }
