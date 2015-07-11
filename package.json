@@ -4,7 +4,7 @@
     "main": "index.js",
     "version": "1.0.1",
     "engines": {
-        "gitbook": ">2.x.x"
+        "gitbook": ">=2.0.0"
     },
     "homepage": "https://github.com/GitbookIO/plugin-katex",
     "repository": {
