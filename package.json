@@ -16,6 +16,6 @@
         "url": "https://github.com/GitbookIO/plugin-katex/issues"
     },
     "dependencies": {
-        "katex": "0.4.*"
+        "katex": ">=0.5.1"
     }
 }
