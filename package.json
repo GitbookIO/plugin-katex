@@ -2,7 +2,7 @@
     "name": "gitbook-plugin-katex",
     "description": "Math typesetting using KaTex into GitBook",
     "main": "index.js",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "engines": {
         "gitbook": ">=2.0.0"
     },
