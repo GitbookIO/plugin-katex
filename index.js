@@ -24,7 +24,9 @@ module.exports = {
             process: function(blk) {
                 var tex = blk.body;
                 var isInline = !(tex[0] == "\n");
-                var output = katex.renderToString(tex);
+                var output = katex.renderToString(tex, {
+                    displayMode: !isInline
+                });
 
                 if (!isInline) {
                     output = '<div style="text-align: center;">'+output+'</div>';
