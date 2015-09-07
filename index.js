@@ -22,7 +22,15 @@ module.exports = {
                 end: "$$"
             },
             process: function(blk) {
-                return katex.renderToString(blk.body);
+                var tex = blk.body;
+                var isInline = !(tex[0] == "\n");
+                var output = katex.renderToString(tex);
+
+                if (!isInline) {
+                    output = '<div style="text-align: center;">'+output+'</div>';
+                }
+
+                return output;
             }
         }
     }
