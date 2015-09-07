@@ -28,10 +28,6 @@ module.exports = {
                     displayMode: !isInline
                 });
 
-                if (!isInline) {
-                    output = '<div style="text-align: center;">'+output+'</div>';
-                }
-
                 return output;
             }
         }
