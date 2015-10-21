@@ -17,5 +17,6 @@
     },
     "dependencies": {
         "katex": ">=0.5.1"
-    }
+    },
+    "keywords": ["math", "latex"]
 }
