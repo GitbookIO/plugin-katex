@@ -5,7 +5,7 @@ Use it for your book, by adding to your book.json:
 
 ```
 {
-    plugins: ["katex"]
+    "plugins": ["katex"]
 }
 ```
 
@@ -29,7 +29,7 @@ Or using the templating syntax:
 ```
 
 
-### Comparaison with [MathJax](https://github.com/GitbookIO/plugin-mathjax)
+### Comparison with [MathJax](https://github.com/GitbookIO/plugin-mathjax)
 
 - Faster
 
