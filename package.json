@@ -16,7 +16,7 @@
         "url": "https://github.com/GitbookIO/plugin-katex/issues"
     },
     "dependencies": {
-        "katex": ">=0.5.1"
+        "katex": "0.7.1"
     },
     "keywords": ["math", "latex"]
 }
